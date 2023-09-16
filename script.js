@@ -7,3 +7,15 @@
 // Faire apparaitre la popup quand on est en bas du site
 
 // Bonus : quand on clicke sur la popup elle disparait pour toujours
+
+let scrollLvl = 0;
+window.addEventListener('scroll', () => {
+    //console.log('test');
+
+    if (window.scrollY > scrollLvl) {
+        navbar.style.height = "45px";
+    } else {
+        navbar.style.height = "90px";
+    }
+    scrollLvl = window.scrollY;
+});
